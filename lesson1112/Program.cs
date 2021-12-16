@@ -12,8 +12,8 @@ namespace lesson1112
         {
             Rational rational = new Rational();
             Type typeInfo = typeof(Rational);
-            object[] attrs = typeInfo.GetCustomAttributes(false);
-            Console.WriteLine((attrs[0] as DeveloperInfoAttribute).dateTime);
+            object[] obj = typeInfo.GetCustomAttributes(false);
+            Console.WriteLine((obj[0] as DeveloperInfoAttribute).dateTime);
 
             Account account = new Account();
             account.DumpToScreen();
