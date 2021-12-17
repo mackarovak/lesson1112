@@ -6,10 +6,11 @@ using System.Threading.Tasks;
 
 namespace lesson1112
 {
+    [AttributeUsage(AttributeTargets.Class, AllowMultiple = true)]
     public class DeveloperInfoAttribute : System.Attribute
     {
-        public string Name { get; set; }
-        public string  dateTime { get; set; }
+        public string Name { get; private set; }
+        public string  dateTime { get; private set; }
         public DeveloperInfoAttribute() { }
         public DeveloperInfoAttribute(string Name, string dateTime)
         {

@@ -6,10 +6,11 @@ using System.Threading.Tasks;
 
 namespace lesson1112
 {
+    [AttributeUsage(AttributeTargets.Class, AllowMultiple = true)]
     public class BuildingInfoAttribute : System.Attribute
     {
-        public string Name { get; set; }
-        public string Organization { get; set; }
+        public string Name { get; private set; }
+        public string Organization { get; private set; }
         public BuildingInfoAttribute() { }
         public BuildingInfoAttribute(string Name, string Organization)
         {
